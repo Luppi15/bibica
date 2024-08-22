@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+*{
+    font-family: "Dancing Script", cursive;
+} 
+.card {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 155px 62px rgba(0, 0, 0, 0.01), 0px 87px 52px rgba(0, 0, 0, 0.05), 0px 39px 39px rgba(0, 0, 0, 0.09), 0px 10px 21px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 193));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  /* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  .container {
+    width: 100%;
+    height: 100%;
+    --color: #faa7ce;
+    background: linear-gradient(45deg, var(--color) 25%, transparent 25%) -50px 0,
+          linear-gradient(-45deg, var(--color) 25%, transparent 25%) -50px 0,
+          linear-gradient(45deg, transparent 75%, var(--color) 75%) -50px 0,
+          linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0;
+    background-color: #f2f2fb;
+    background-size: 10px 40px;
+  }
+  
